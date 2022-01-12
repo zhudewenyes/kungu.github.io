@@ -1,0 +1,11 @@
+@mixin text_ellipsis($line: 2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+}
+
+@mixin safe_area($direction, $mode: inset) {
+	padding-#{$direction}: env(safe-area-#{$mode}-#{$direction});
+}
